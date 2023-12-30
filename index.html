@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar</title>
+
+    <!-- REMIX ICON CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- MY CSS -->
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <section class="header_area">
+      <header>
+        <div class="navbar">
+          <div class="logo"><a href="#">WebTech</a></div>
+          <ul class="links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <a href="#" class="action_btn">Get Started</a>
+
+          <div class="toggle_btn">
+            <i class="ri-menu-2-line"></i>
+          </div>
+        </div>
+        <div class="dropdown_menu">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#" class="action_btn">Get Started</a></li>
+        </div>
+      </header>
+    </section>
+
+    <main>
+      <section id="hero">
+        <h1>Wellcome</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur <br />adipisicing elit Eveniet,
+          quaerat!
+        </p>
+      </section>
+
+      <section id="about">
+        <h1>About</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur <br />adipisicing elit Eveniet,
+          quaerat!
+        </p>
+      </section>
+
+      <section id="services">
+        <h1>Services</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur <br />adipisicing elit Eveniet,
+          quaerat!
+        </p>
+      </section>
+
+      <section id="contact">
+        <h1>Contact</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur <br />adipisicing elit Eveniet,
+          quaerat!
+        </p>
+      </section>
+    </main>
+
+    <script>
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropDownMenu = document.querySelector(".dropdown_menu");
+
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle("open");
+
+        const isOpen = dropDownMenu.classList.contains("open");
+
+        toggleBtnIcon.classList = isOpen ? "ri-close-line" : "ri-menu-2-line";
+      };
+    </script>
+  </body>
+</html>
+
+<!-- Video Source -->
+<!-- https://www.youtube.com/watch?v=GdrbE-s5DgQ&t=510s -->
